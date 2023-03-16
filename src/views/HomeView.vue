@@ -1,61 +1,75 @@
-<template xmlns:-size="http://www.w3.org/1999/xhtml" xmlns:font-size="http://www.w3.org/1999/xhtml">
+<template>
     <el-container style="min-height: 100vh;">
-      <el-aside :width="sideWidth + 'px'" style="background-color: rgb(238, 241, 246); height: 100%">
-        <el-menu :default-openeds="['1', '3']" style="min-height: 100% ;overflow-x:hidden "
-          background-color="rgb(176,224,230)"
-          text-color="fff"
-          active-text-color="#ffd04b"
-          :collapse-transition="false"
-          :collapse="isCollapse"
-        >
-          <el-submenu index="1">
-            <template slot="title"><i class="el-icon-message"></i>导航一</template>
-            <el-menu-item-group>
-              <template slot="title">分组一</template>
-              <el-menu-item index="1-1">选项1</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="分组2">
-              <el-menu-item index="1-3">选项3</el-menu-item>
-            </el-menu-item-group>
-            <el-submenu index="1-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="1-4-1">选项4-1</el-menu-item>
+      <div>
+        <el-aside :width="sideWidth + 'px'" style="background-color: rgb(238, 241, 246); height: 100%">
+          <el-menu :default-openeds="['1', '3']" style="min-height: 100% ;overflow-x:hidden "
+                   background-color="rgb(176,224,230)"
+                   text-color="fff"
+                   active-text-color="#ffd04b"
+                   :collapse-transition="false"
+                   :collapse="isCollapse"
+          >
+            <div style="height: 60px; line-height: 60px;text-align: center">
+            <img src="../assets/logo.png" alt="" style="width: 15px;position: relative;top: 3px ;margin-right: 5px" >
+              <b style="color: black" v-show="logoTextShow">水产公司管理系统</b>
+            </div>
+            <el-submenu index="1">
+              <template slot="title">
+                <i class="el-icon-user-solid"></i>
+                <span>导航一</span>
+              </template>
+              <el-menu-item-group>
+                <template slot="title">分组一</template>
+                <el-menu-item index="1-1">选项1</el-menu-item>
+                <el-menu-item index="1-2">选项2</el-menu-item>
+              </el-menu-item-group>
+              <el-menu-item-group title="分组2">
+                <el-menu-item index="1-3">选项3</el-menu-item>
+              </el-menu-item-group>
+              <el-submenu index="1-4">
+                <template slot="title">选项4</template>
+                <el-menu-item index="1-4-1">选项4-1</el-menu-item>
+              </el-submenu>
             </el-submenu>
-          </el-submenu>
-          <el-submenu index="2">
-            <template slot="title"><i class="el-icon-menu"></i>导航二</template>
-            <el-menu-item-group>
-              <template slot="title">分组一</template>
-              <el-menu-item index="2-1">选项1</el-menu-item>
-              <el-menu-item index="2-2">选项2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="分组2">
-              <el-menu-item index="2-3">选项3</el-menu-item>
-            </el-menu-item-group>
-            <el-submenu index="2-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="2-4-1">选项4-1</el-menu-item>
+            <el-submenu index="2">
+              <template slot="title">
+                <i class="el-icon-menu"></i>
+                <span>导航二</span>
+              </template>
+              <el-menu-item-group>
+                <template slot="title">分组一</template>
+                <el-menu-item index="2-1">选项1</el-menu-item>
+                <el-menu-item index="2-2">选项2</el-menu-item>
+              </el-menu-item-group>
+              <el-menu-item-group title="分组2">
+                <el-menu-item index="2-3">选项3</el-menu-item>
+              </el-menu-item-group>
+              <el-submenu index="2-4">
+                <template slot="title">选项4</template>
+                <el-menu-item index="2-4-1">选项4-1</el-menu-item>
+              </el-submenu>
             </el-submenu>
-          </el-submenu>
-          <el-submenu index="3">
-            <template slot="title"><i class="el-icon-setting"></i>导航三</template>
-            <el-menu-item-group>
-              <template slot="title">分组一</template>
-              <el-menu-item index="3-1">选项1</el-menu-item>
-              <el-menu-item index="3-2">选项2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="分组2">
-              <el-menu-item index="3-3">选项3</el-menu-item>
-            </el-menu-item-group>
-            <el-submenu index="3-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="3-4-1">选项4-1</el-menu-item>
+            <el-submenu index="3">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>导航三</span>
+              </template>
+              <el-menu-item-group>
+                <template slot="title">分组一</template>
+                <el-menu-item index="3-1">选项1</el-menu-item>
+                <el-menu-item index="3-2">选项2</el-menu-item>
+              </el-menu-item-group>
+              <el-menu-item-group title="分组2">
+                <el-menu-item index="3-3">选项3</el-menu-item>
+              </el-menu-item-group>
+              <el-submenu index="3-4">
+                <template slot="title">选项4</template>
+                <el-menu-item index="3-4-1">选项4-1</el-menu-item>
+              </el-submenu>
             </el-submenu>
-          </el-submenu>
-        </el-menu>
-      </el-aside>
-
+          </el-menu>
+        </el-aside>
+      </div>
       <el-container>
         <el-header style=" font-size: 12px; border-bottom:1px solid #ccc; line-height:60px;display:flex">
           <div style="flex: 1 ; font-size: 18px " >
@@ -98,13 +112,20 @@ export default {
       tableData: Array(10).fill(item),
       collapseBtnClass: 'el-icon-s-fold',
       isCollapse: false,
-      sideWidth: 200
+      sideWidth: 200,
+      logoTextShow: true  //默认显示
     }
   },methods: {
-    collapse(){  //点击收缩按钮触发
+    collapse   (){  //点击收缩按钮触发
      this.isCollapse = !this.isCollapse
       if (this.isCollapse){
-        this.sideWidth= 64
+        this.sideWidth = 64
+        this.collapseBtnClass='el-icon-s-unfold'
+        this.logoTextShow = false
+      }else{  //点击展开效果
+        this.sideWidth = 200
+        this.collapseBtnClass = 'el-icon-s-fold'
+        this.logoTextShow = true
       }
     }
   }
